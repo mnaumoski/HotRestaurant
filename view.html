@@ -10,10 +10,54 @@
 <body>
     <main>
         <div class="container">
-            <div class="jumbotron"><h1><span class="glyphicon glyphicon-glass"></span>Hot New Restaurant</h1>
-            <h3>We only have 5 tables. Get them before they are gone!</h3>
-            <a href="reservation"><button class="btn btn-primary">Make reservation</button></a>
+            <div class="jumbotron">
+                <h1><span class="glyphicon glyphicon-glass"></span>Hot New Restaurant</h1>
+                <h3>We only have 5 tables. Get them before they are gone!</h3>
+                <a href="reservation">
+                    <button class="btn btn-primary">Make reservation</button>
+                </a>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Reservations</h3>
+                </div>
+                <div class="panel-body" id="wellSection">
+                    <h2 id="name">Jane Doe</h2>
+                    <h3>Email: <span id="email">customer@mail.com</span></h3>
+                    <h3>Message: <span id="message">Great to be here!</span></h3>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Wait list</h3>
+                </div>
+                <div class="panel-body" id="wellSection">
+                    <h2 id="name">John Doe</h2>
+                    <h3>Email: <span id="email">customer@mail.com</span></h3>
+                    <h3>Message: <span id="message">It's worth the wait!</span></h3>
+                </div>
+            </div>
         </div>
+        <!-- <script type="text/javascript">
+            var currentURL = window.location.origin;
+
+            console.log(currentURL + '/api');
+
+            $.get(currentURL + '/api', function(data) {
+
+                for (var i = 0; i < data.length; i++) {
+                    var wellSection = $('<div>');
+                    wellSection.addClass('well');
+                    wellSection.attr('id', 'characterWell-' + i);
+                    $('#wellSection').append(wellSection);
+                    $('#characterWell-' + i).append('<h2>' + data[i].name + '</h2>');
+                    $('#characterWell-' + i).append('<h3>Role: ' + data[i].role + '</h4>');
+                    $('#characterWell-' + i).append('<h3>Age: ' + data[i].age + '</h4>');
+                    $('#characterWell-' + i).append('<h3>Force Points: ' + data[i].forcePoints + '</h4>');
+                }
+            });
+            </script> -->
     </main>
 </body>
 

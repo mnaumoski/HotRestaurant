@@ -27,8 +27,21 @@ app.get('/', function(req, res){
 
 app.get('/reservation', function(req, res){
   res.sendFile(path.join(__dirname, 'reservation.html'));
-})
+});
 
 app.get('/view', function(req, res){
   res.sendFile(path.join(__dirname, 'view.html'));
-})
+});
+
+// Create new tables - takes in JSON input
+// app.post('/api/new', function (req, res) {
+//   var newTable = req.body;
+  
+//   newTable.routeName = newTable.name.replace(/\s+/g, '').toLowerCase();
+
+//   console.log(newTable);
+
+//   characters.push(newTable);
+
+//   res.json(newTable);
+// });
